@@ -1,13 +1,16 @@
-##自定义ClassLoad
-
-```java
 package com.test.classload.demo;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-
+/**
+ * @ClassName: MyClassLoader
+ * @Description: TODO
+ * @Author zhaiwei
+ * @Date 2020/10/21 19:22
+ * @Version 1.0
+ */
 public class MyClassLoader extends ClassLoader{
 
     private static final String HELLO_CLASS_FILE = "./Hello.xlass";
@@ -49,6 +52,15 @@ public class MyClassLoader extends ClassLoader{
     }
 
 
+
+
+    /**
+     * 读取文件到Byte数组
+     *
+     * @param filePath
+     * @return
+     * @throws IOException
+     */
     public static byte[] getFileContent(String filePath) throws IOException {
 
 
@@ -83,8 +95,3 @@ public class MyClassLoader extends ClassLoader{
         return bytes;
     }
 }
-```
-
-##Xmx、Xms、Xmn、Meta、DirectMemory、Xss 这些内存参数的关系
-
-![jvm结构和设置](/Users/zhaiwei/work_dir/JAVA-001/Week_01/jvm结构和设置.png)
